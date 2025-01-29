@@ -43,6 +43,34 @@ template <typename T> class LimitedVector {
     const T &operator[](size_t index) const;
 
     /**
+     * @brief Gets the first element in the vector.
+     *
+     * @return A reference to the first element.
+     */
+    T &front();
+
+    /**
+     * @brief Gets the first element in the vector (const version).
+     *
+     * @return A const reference to the first element.
+     */
+    const T &front() const;
+
+    /**
+     * @brief Gets the last element in the vector.
+     *
+     * @return A reference to the last element.
+     */
+    T &back();
+
+    /**
+     * @brief Gets the last element in the vector (const version).
+     *
+     * @return A const reference to the last element.
+     */
+    const T &back() const;
+
+    /**
      * @brief Gets the current size of the vector.
      *
      * @return The number of elements in the vector.
@@ -60,6 +88,34 @@ template <typename T> class LimitedVector {
      * @brief Clears all elements in the vector.
      */
     void clear();
+
+    /**
+     * @brief Returns an iterator to the beginning of the vector.
+     *
+     * @return Iterator pointing to the first element.
+     */
+    typename std::vector<T>::iterator begin();
+
+    /**
+     * @brief Returns a const iterator to the beginning of the vector.
+     *
+     * @return Const iterator pointing to the first element.
+     */
+    typename std::vector<T>::const_iterator begin() const;
+
+    /**
+     * @brief Returns an iterator to the end of the vector.
+     *
+     * @return Iterator pointing to the position after the last element.
+     */
+    typename std::vector<T>::iterator end();
+
+    /**
+     * @brief Returns a const iterator to the end of the vector.
+     *
+     * @return Const iterator pointing to the position after the last element.
+     */
+    typename std::vector<T>::const_iterator end() const;
 
   private:
     size_t max_size_;     ///< The maximum number of elements the vector can hold.
