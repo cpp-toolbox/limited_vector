@@ -2,6 +2,7 @@
 #define LIMITED_VECTOR_TPP
 
 #include "limited_vector.hpp"
+#include <stdexcept>
 
 template <typename T> LimitedVector<T>::LimitedVector(size_t max_size) : max_size_(max_size) {}
 
