@@ -112,6 +112,14 @@ template <typename T> class LimitedVector {
     void clear() { data_.clear(); }
 
     /**
+     * @brief Erases the element at the given position.
+     *
+     * @param pos Iterator pointing to the element to erase.
+     * @return Iterator pointing to the element following the erased one.
+     */
+    typename std::vector<T>::iterator erase(typename std::vector<T>::iterator pos) { return data_.erase(pos); }
+
+    /**
      * @brief Returns an iterator to the beginning of the vector.
      *
      * @return Iterator pointing to the first element.
